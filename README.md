@@ -1,20 +1,70 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+![Tiwariji-Portfolio](https://github.com/tiwariji7/tiwariji-portfolio/blob/main/Screenshot%202026-02-08%20230427.png)
+🚀 Shivam Tiwari — 3D Portfolio Website
 
-# Run and deploy your AI Studio app
+A modern, futuristic 3D developer portfolio built to showcase projects, skills, and experience with a premium UI/UX.
+Designed with smooth animations, glassmorphism effects, and a performance-focused architecture.
 
-This contains everything you need to run your app locally.
+🌐 Live Demo
 
-View your app in AI Studio: https://ai.studio/apps/drive/1AM7oV1Y2oKD0NyS8MCvPGoFStOSQ3Fzn
+🔗 Live Website: https://tiwarijii.in
 
-## Run Locally
+✨ Highlights
 
-**Prerequisites:**  Node.js
+⚡ High-performance build using Vite
 
+🎨 Premium glassmorphism UI
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+🌀 Smooth animations with Framer Motion
+
+🧠 Clean component-based architecture
+
+📱 Fully responsive on all devices
+
+🔗 Working GitHub & Live Demo buttons
+
+🎯 Scroll-based navigation (SPA experience)
+
+🌌 Futuristic 3D animated background
+
+🛠️ Tech Stack
+
+Frontend: React + TypeScript
+
+Build Tool: Vite
+
+Styling: Tailwind CSS
+
+Animations: Framer Motion
+
+Icons: Lucide Icons
+
+Deployment: Vercel
+
+📌 Sections Included
+
+Home – Hero section with animated intro
+
+About – Professional summary
+
+Skills – Categorized tech stack
+
+Projects – Live demos & GitHub repos
+
+Experience – Internships & contributions
+
+Education – Academic background
+
+Contact – Direct communication
+
+👨‍💻 Author
+
+Shivam Tiwari
+Software Engineer | Android Developer | AI Enthusiast
+
+GitHub: https://github.com/tiwariji7
+
+LinkedIn: https://linkedin.com/in/tiwarijii
+
+❤️ Footer Note
+
+Developed with ❤️, passion, and clean code by Shivam Tiwari.
