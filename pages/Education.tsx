@@ -7,9 +7,9 @@ import { GraduationCap, Award } from 'lucide-react';
 
 const Education: React.FC = () => {
   const education = [
-    { degree: 'B.Tech in CSE', institution: 'AKTU', year: '2020 - 2024', grade: 'Honors' },
-    { degree: 'Class XII', institution: 'UP Board', year: '2019', grade: 'First Div' },
-    { degree: 'Class X', institution: 'UP Board', year: '2017', grade: 'First Div' }
+    { degree: 'B.Tech in CSE', institution: 'AKTU', year: '2022 - 2026', grade: 'Honors' },
+    { degree: 'Class XII', institution: 'UP Board', year: '2022', grade: 'First Div' },
+    { degree: 'Class X', institution: 'UP Board', year: '2020', grade: 'First Div' }
   ];
 
   return (
