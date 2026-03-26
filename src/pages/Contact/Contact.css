@@ -1,0 +1,202 @@
+.contact {
+    margin: 88px auto;
+    max-width: 1200px;
+    padding: 40px;
+}
+
+.contact .title {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.contact .title h2 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffece4;
+}
+
+.contact .title::after {
+    content: "";
+    width: 110px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ff5727, transparent);
+    display: block;
+    margin: 14px auto;
+}
+
+.contact .contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 36px;
+}
+
+.contact .contact-info,
+.contact .contact-form {
+    border: 1px solid rgba(255, 109, 50, 0.24);
+    border-radius: 16px;
+    background: linear-gradient(150deg, rgba(9, 15, 23, 0.89), rgba(14, 12, 16, 0.87));
+}
+
+.contact .contact-info {
+    max-width: 440px;
+    width: 100%;
+    padding: 28px;
+}
+
+.contact .contact-info h3 {
+    font-size: 1.78rem;
+    margin-bottom: 14px;
+    color: #f3f7ff;
+}
+
+.contact .contact-info p {
+    color: #becadb;
+    margin-bottom: 26px;
+    line-height: 1.5;
+}
+
+.contact .info-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+    font-size: 1rem;
+    color: #d8e0ec;
+}
+
+.contact .contact-icon {
+    font-size: 1.2rem;
+    color: #ff9368;
+    animation: iconFloat 3s ease-in-out infinite;
+    transition: 0.2s ease;
+}
+
+.contact .info-item:hover .contact-icon {
+    transform: scale(1.2);
+    color: #ffc3ad;
+}
+
+@keyframes iconFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.contact .contact-form {
+    width: 100%;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 26px;
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 130, 82, 0.24);
+    background-color: rgba(8, 13, 19, 0.75);
+    color: #f9fbff;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.contact .contact-form input:focus,
+.contact .contact-form textarea:focus {
+    border-color: rgba(255, 140, 92, 0.55);
+    box-shadow: 0 0 0 3px rgba(255, 84, 33, 0.2);
+}
+
+.contact .contact-form input::placeholder,
+.contact .contact-form textarea::placeholder {
+    color: #8f9bad;
+}
+
+.contact .contact-form button {
+    padding: 13px;
+    border: 1px solid rgba(255, 136, 90, 0.5);
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 83, 30, 0.34), rgba(255, 83, 30, 0.14));
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+    transition: 0.24s ease;
+}
+
+.contact .contact-form button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(255, 84, 33, 0.28);
+}
+
+.contact .contact-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.status-message {
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.status-success {
+    background-color: rgba(34, 197, 94, 0.2);
+    border: 1px solid rgba(34, 197, 94, 0.5);
+    color: #86efac;
+}
+
+.status-error {
+    background-color: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.5);
+    color: #fca5a5;
+}
+
+@media (max-width: 980px) {
+    .contact .contact-container {
+        flex-direction: column;
+    }
+
+    .contact .contact-info,
+    .contact .contact-form {
+        max-width: unset;
+    }
+}
+
+@media (max-width: 700px) {
+    .contact {
+        margin: 64px auto;
+        padding: 24px;
+    }
+
+    .contact .contact-info,
+    .contact .contact-form {
+        padding: 18px;
+    }
+}

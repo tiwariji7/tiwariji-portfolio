@@ -1,0 +1,125 @@
+.about {
+    margin: 80px auto;
+    max-width: 1200px;
+    padding: 40px;
+}
+
+.about .title {
+    margin-bottom: 56px;
+    text-align: center;
+    position: relative;
+}
+
+.about .title h2 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: #ffe7dc;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.about .title::after {
+    content: "";
+    width: 118px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ff5f2a, transparent);
+    display: block;
+    margin: 14px auto 0;
+    border-radius: 2px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 68px;
+}
+
+.photo-card {
+    width: 320px;
+    height: 420px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.photo-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.photo-inner.flip {
+    transform: rotateY(180deg);
+}
+
+.photo-front,
+.photo-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.photo-back {
+    transform: rotateY(180deg);
+}
+
+.photo-front img,
+.photo-back img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    transition: 0.35s;
+    border: 1px solid rgba(255, 124, 69, 0.35);
+    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.52);
+}
+
+.photo-front img {
+    filter: grayscale(10%) brightness(0.9);
+}
+
+.photo-card:hover img {
+    transform: scale(1.04);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.62), 0 0 16px rgba(255, 82, 30, 0.24);
+}
+
+.text-about {
+    max-width: 580px;
+    padding: 24px 26px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 106, 40, 0.23);
+    background: linear-gradient(145deg, rgba(9, 14, 21, 0.82), rgba(13, 12, 16, 0.84));
+}
+
+.text-about p {
+    font-size: 1.16rem;
+    line-height: 1.72;
+    color: #d0d7e0;
+    text-align: left;
+}
+
+@media (max-width: 980px) {
+    .about-content {
+        flex-direction: column;
+        gap: 34px;
+    }
+}
+
+@media (max-width: 700px) {
+    .about {
+        margin: 56px auto;
+        padding: 24px;
+    }
+
+    .photo-card {
+        width: min(320px, 86vw);
+        height: min(420px, 118vw);
+    }
+
+    .text-about {
+        padding: 18px;
+    }
+}

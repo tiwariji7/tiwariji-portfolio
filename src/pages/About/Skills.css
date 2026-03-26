@@ -1,0 +1,89 @@
+.skills {
+    margin-top: 96px;
+    text-align: center;
+    padding: 26px 0;
+    border-top: 1px solid rgba(255, 106, 40, 0.16);
+    border-bottom: 1px solid rgba(255, 106, 40, 0.16);
+    background: linear-gradient(90deg, rgba(255, 98, 35, 0.04), rgba(255, 98, 35, 0.01), rgba(255, 98, 35, 0.04));
+}
+
+.skills-slider {
+    --skill-gap: 66px;
+    position: relative;
+    width: 100%;
+    min-height: 3.4rem;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.skills-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--skill-gap);
+    padding-right: var(--skill-gap);
+    font-size: 3.1rem;
+    color: #d6dde8;
+    width: max-content;
+    animation-duration: 24s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+}
+
+.track-1 {
+    animation-name: scrollTrack1;
+}
+
+.track-2 {
+    animation-name: scrollTrack2;
+}
+
+.skills-track svg {
+    flex: 0 0 auto;
+    transition: 0.25s ease;
+    filter: drop-shadow(0 0 8px rgba(255, 96, 34, 0.22));
+}
+
+.skills-track svg:hover {
+    transform: scale(1.18);
+    color: #ff8d61;
+}
+
+@keyframes scrollTrack1 {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes scrollTrack2 {
+    from {
+        transform: translate3d(100%, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (max-width: 700px) {
+    .skills {
+        margin-top: 64px;
+        padding: 18px 0;
+    }
+
+    .skills-slider {
+        --skill-gap: 42px;
+    }
+
+    .skills-track {
+        font-size: 2.3rem;
+    }
+}

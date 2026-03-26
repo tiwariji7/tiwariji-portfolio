@@ -1,0 +1,211 @@
+.experience {
+    width: min(1200px, 92%);
+    margin: 88px auto 0;
+}
+
+.experience .title {
+    margin-bottom: 14px;
+    text-align: center;
+    position: relative;
+}
+
+.experience .title h2 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffece4;
+}
+
+.experience .title::after {
+    content: "";
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ff5a28, transparent);
+    display: block;
+    margin: 13px auto 0;
+    border-radius: 2px;
+}
+
+.experience-tagline {
+    text-align: center;
+    color: #cdd5df;
+    margin-bottom: 34px;
+    letter-spacing: 0.4px;
+}
+
+.experience-showcase {
+    position: relative;
+    padding: 0;
+}
+
+.experience-container {
+    --timeline-gap: 20px;
+    --node-size: 14px;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 20px;
+    padding: 6px 0;
+}
+
+.experience-container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, rgba(255, 126, 69, 0.15), rgba(255, 126, 69, 0.65), rgba(255, 126, 69, 0.15));
+    box-shadow: 0 0 12px rgba(255, 95, 34, 0.25);
+}
+
+.experience-card {
+    position: relative;
+    width: min(820px, calc(50% - var(--timeline-gap)));
+    padding: 20px;
+    border: 1px solid rgba(255, 127, 69, 0.2);
+    border-radius: 18px;
+    background: linear-gradient(150deg, rgba(11, 16, 24, 0.88), rgba(24, 14, 13, 0.75));
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+    transition: 0.28s ease;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.experience-card.left {
+    justify-self: start;
+}
+
+.experience-card.right {
+    justify-self: end;
+}
+
+.experience-node {
+    position: absolute;
+    top: 32px;
+    width: var(--node-size);
+    height: var(--node-size);
+    border-radius: 50%;
+    background: #ffd8c8;
+    border: 2px solid #ff7f4a;
+    box-shadow: 0 0 14px rgba(255, 95, 34, 0.55);
+}
+
+.experience-card.left .experience-node {
+    right: calc((var(--timeline-gap) + (var(--node-size) / 2)) * -1);
+}
+
+.experience-card.right .experience-node {
+    left: calc((var(--timeline-gap) + (var(--node-size) / 2)) * -1);
+}
+
+.experience-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 140, 89, 0.45);
+    box-shadow: 0 18px 32px rgba(0, 0, 0, 0.45), 0 0 18px rgba(255, 88, 33, 0.26);
+}
+
+.experience-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 1.35rem;
+    color: #ffd9cb;
+    background: radial-gradient(circle at top right, rgba(255, 120, 60, 0.32), rgba(255, 76, 24, 0.08));
+    border: 1px solid rgba(255, 122, 63, 0.34);
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+
+.experience-icon img {
+    width: 84%;
+    height: 84%;
+    object-fit: contain;
+    display: block;
+}
+
+.experience-icon.logo-icon {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(245, 248, 255, 0.92));
+    border-color: rgba(255, 142, 84, 0.55);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+}
+
+.experience-body {
+    flex: 1;
+}
+
+.experience-meta h3 {
+    font-size: 1.2rem;
+    color: #f8f9fb;
+}
+
+.experience-meta span {
+    color: #ffb294;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.experience-duration {
+    margin-top: 10px;
+    width: fit-content;
+    color: #f8ddd1;
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.6px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 135, 82, 0.4);
+    background: rgba(255, 90, 33, 0.12);
+}
+
+.experience-summary {
+    margin-top: 12px;
+    color: #b8c2cf;
+    line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+    .experience-container {
+        --timeline-gap: 14px;
+        gap: 16px;
+    }
+
+    .experience-container::before {
+        left: 18px;
+        transform: none;
+    }
+
+    .experience-card,
+    .experience-card.left,
+    .experience-card.right {
+        justify-self: end;
+        width: calc(100% - (var(--timeline-gap) * 2));
+    }
+
+    .experience-card.left .experience-node,
+    .experience-card.right .experience-node {
+        left: calc((var(--timeline-gap) + (var(--node-size) / 2)) * -1);
+        right: auto;
+    }
+}
+
+@media (max-width: 620px) {
+    .experience {
+        margin-top: 68px;
+    }
+
+    .experience-card {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .experience-icon {
+        width: 48px;
+        height: 48px;
+    }
+}
