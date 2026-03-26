@@ -1,4 +1,3 @@
-![Tiwariji-Portfolio](https://github.com/tiwariji7/tiwariji-portfolio/blob/main/Screenshot%202026-02-08%20230427.png)
 🚀 Shivam Tiwari — 3D Portfolio Website
 
 A modern, futuristic 3D developer portfolio built to showcase projects, skills, and experience with a premium UI/UX.
